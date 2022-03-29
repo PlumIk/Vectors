@@ -21,7 +21,7 @@ namespace Vectors
                     return;
                 }
                 double[] pars = new double[12];
-                //Конфертируем точки в double и, если хоть она не double, останавливаемся
+                //Конвертируем точки в double и, если хоть она не double, останавливаемся
                 for (int i = 0; i < 12; i++)
                 {
                     bool isDouble = Double.TryParse(args[i], out pars[i]);

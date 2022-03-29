@@ -36,7 +36,9 @@ namespace Vectors.MathClasses
             Matrix matrix;
             double[] rep;
             genMat(one, two, out matrix, out rep);
+            //matrix.print();
             var det = matrix.CalculateDeterminant();
+            //Console.WriteLine("det "+det.ToString());
             if (det== 0)
             {
                 return overlay(one, two);
@@ -44,6 +46,8 @@ namespace Vectors.MathClasses
             var ret=new double[2];
             ret[0] = matrix.ReplaceMatrixColumn(0,rep).CalculateDeterminant()/det;
             ret[1] = matrix.ReplaceMatrixColumn(1,rep).CalculateDeterminant()/det;
+            //Console.WriteLine(ret[0].ToString());
+            //Console.WriteLine(ret[1].ToString());
             if (ret[0]>=0 && ret[0]<=1&& ret[1] >= 0 && ret[1] <= 1)
             {
                 return ret;
